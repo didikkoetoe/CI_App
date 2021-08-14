@@ -19,9 +19,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Barang</a>
+            <a class="nav-link" aria-current="page" href="<?= base_url(); ?>">Home</a>
+            <a class="nav-link" href="<?= base_url(); ?>About">About</a>
+            <a class="nav-link" href="<?= base_url(); ?>Barang">Barang</a>
           </div>
         </div>
       </div>
