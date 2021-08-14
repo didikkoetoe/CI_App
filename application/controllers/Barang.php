@@ -16,7 +16,7 @@ class Barang extends CI_Controller {
 		$data['barang'] = $this->Barang_model->getAllBarang();
 		$this->load->view('templates/header', $data);
 		$this->load->view('barang/index', $data);
-		$this->load->view('templates/footer')
+		$this->load->view('templates/footer');
 	}
 
 	public function tambah()
