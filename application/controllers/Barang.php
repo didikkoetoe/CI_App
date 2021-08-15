@@ -25,13 +25,20 @@ class Barang extends CI_Controller {
 
 		// Rules
 		$this->form_validation->set_rules('nama' , 'Nama' , 'required');
+		$this->form_validation->set_rules('harga' , 'Harga' , 'required');
+		$this->form_validation->set_rules('berat' , 'Berat' , 'required');
+		$this->form_validation->set_rules('warna' , 'Warna' , 'required');
+		$this->form_validation->set_rules('jumlah' , 'Jumlah' , 'required');
+		$this->form_validation->set_rules('deskripsi' , 'Deskipsi' , 'required');
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header', $data);
 			$this->load->view('barang/tambah');
 			$this->load->view('templates/footer');
 		} else {
-			echo "Ok";
+			$this->Barang_model->tambahBarang();
+			$this->session->set_flashdata('flash', 'Berhasil');
+			redirect('Barang');
 		}
 	}
 
